@@ -15,36 +15,62 @@ From our own development experience, we've seen how small teams (5-25 people) st
 
 **The result?** Small teams make critical product decisions without professional business intelligence frameworks, while larger organizations have dedicated resources for structured analysis.
 
-## Our Vision: The Business Intelligence Companion
+## Our Vision: The Python Orchestration Cockpit
 
-**Small teams should have access to professional business analysis frameworks.**
+**A Python cockpit that drives the BRD→PRD→FRD pipeline across multiple projects and companies.**
 
-We envision an evolution from current template system toward intelligent orchestration:
+We envision an evolution from the current make-command workflow toward a Python orchestrator that manages Claude Code agents, tracks costs, enforces quality gates, and provides dashboard visibility.
 
-**Phase 1 (8-12 weeks)**: Enhanced templates with agent orchestration and context compression
+**Phase 0 (Foundation)**: Data models, state persistence, CC bridge, workspace isolation
 
-- Small teams get better templates with automated handoffs between AI agents
-- Context preservation between business analysis phases
-- Streamlined workflow requiring less manual refinement
+- Pydantic models for projects, stages, and state
+- JSON persistence with atomic writes
+- `claude -p` subprocess wrapper for headless CC execution
 
-**Phase 2 (12+ months)**: Full CABIO business intelligence orchestration
+**Phase 1 (Single-Project Orchestration)**: Pipeline runner, quality gates, FRD fan-out, CLI
 
-- Real market intelligence integration for data-driven decisions
-- Enterprise-grade workflows that scale with organizational growth
+- Auto-chain BRD→PRD→FRD stages with quality gate scoring
+- Fan-out: extract features from PRD, generate one FRD per feature
+- Execute stage hands off to Ralph WT for TDD implementation
+- CLI: `cabio project create`, `cabio run`, `cabio status`
+
+**Phase 2 (Multi-Project Cockpit)**: Dashboard, parallel FRD, multi-company workspace
+
+- Rich terminal dashboard showing all projects, stages, and costs
+- Parallel FRD generation via ThreadPoolExecutor
+- Multi-company workspace isolation
+
+**Phase 3 (Future — Design Only)**: Intelligence layer
+
+- Automated market intelligence as pre-BRD stage
+- Memory systems, cost budgets, agent runtime abstraction
+- Not implemented — architecture accommodates future extension
+
+See [transformation-plan.md](refactor/transformation-plan.md) for the authoritative engineering plan.
+
+## Core Value Propositions
+
+### Multi-Project, Multi-Company Management
+
+One cockpit manages pipelines for multiple projects across multiple companies. Each project has isolated workspace, state, and cost tracking.
+
+### Cost Tracking & Visibility
+
+Every CC invocation logs token usage and cost. Dashboard aggregates per-project and per-company. Phase 3 adds budget auto-throttling.
+
+### Quality Gates
+
+Each pipeline stage passes through a quality gate (CC-scored) before advancing. Failed gates block progression with actionable feedback.
 
 ## Why This Matters Now
 
 ### The AI Agent Revolution
 
-AI agents are becoming sophisticated enough to handle complex business analysis, but they work in isolation. We need orchestration that makes agents work together intelligently.
-
-### The Context Problem  
-
-Traditional tools overwhelm users with information. We believe in **context compression and on-demand routing** - giving decision makers exactly the information they need, when they need it, through smart allocation and need-to-know filtering.
+AI agents are sophisticated enough to handle complex business analysis, but they work in isolation. We need orchestration that makes agents work together intelligently — CABIO never codes itself, it orchestrates CC agents that do.
 
 ### The Small Team Reality
 
-Small teams (5-25 people) typically operate without dedicated business analysts, market researchers, or strategy consultants due to budget and scale constraints. Our current template system provides structure, but enhanced templates with agent orchestration will democratize access to professional business intelligence frameworks.
+Small teams (5-25 people) typically operate without dedicated business analysts, market researchers, or strategy consultants due to budget and scale constraints. The cockpit automates the orchestration overhead so teams focus on decisions, not process.
 
 ## Our North Star
 
@@ -52,7 +78,7 @@ Small teams (5-25 people) typically operate without dedicated business analysts,
 
 Instead of making decisions based on incomplete analysis, small teams should have access to professional business intelligence frameworks that scale with their growth.
 
-We're evolving from template automation toward a **business intelligence companion** - starting with enhanced templates and agent orchestration, building toward comprehensive context-aware intelligence systems.
+We're evolving from make-command invocations toward a **Python orchestration cockpit** — starting with foundation and single-project automation, building toward multi-project dashboards and intelligence layers.
 
 ## Personal Mission
 
@@ -60,11 +86,11 @@ This comes from our own experience building products:
 
 - **Frustration** with manual business analysis refinement and context gathering
 - **Recognition** that structured frameworks improve product decisions
-- **Belief** that enhanced templates with agent orchestration can reduce analysis overhead
+- **Belief** that automated orchestration can reduce analysis overhead
 - **Vision** that small teams deserve professional business intelligence frameworks
 
 CABIO evolves business intelligence from manual template refinement toward intelligent agent orchestration for teams of any size.
 
 ---
 
-*This vision drives everything we build - from enhanced templates to agent orchestration to user experience.*
+*This vision drives everything we build — from foundation models to cockpit dashboards to intelligence layers.*
