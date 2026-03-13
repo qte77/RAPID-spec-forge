@@ -4,7 +4,8 @@
 
 ### Pipeline Commands (`.claude/commands/`)
 
-5 proven prompt-engineering commands driving the BRD->PRD->FRP->Execute workflow:
+5 proven prompt-engineering commands driving the BRD->PRD->FRD->Execute workflow
+(legacy files still use `frp` naming -- to be renamed during refactor):
 
 | Command | File | Input | Output |
 |---------|------|-------|--------|
@@ -21,7 +22,7 @@
 | `business_input_base.md` | Stakeholder initial business info |
 | `brd_base.md` | Business Requirements Definition |
 | `prd_base.md` | Product Requirements Document |
-| `frp_base.md` | Feature Requirements Prompt |
+| `frp_base.md` | Feature Requirements Document (legacy name: "Prompt") |
 | `feature_base.md` | Legacy feature description |
 
 ### Sub-Agents (`.claude/agents/`)
@@ -79,7 +80,7 @@
 
 ### Examples (`examples/mcp-server-client/`)
 
-Complete MCP server-client implementation (Python). Generated via legacy FRP
+Complete MCP server-client implementation (Python). Generated via legacy FRD
 workflow. Has its own `src/`, `tests/`, full GUI.
 
 ## What Is Empty / Minimal
@@ -87,7 +88,7 @@ workflow. Has its own `src/`, `tests/`, full GUI.
 - `src/` -- no application logic
 - `tests/` -- only hello-world
 - `context/PRDs/` -- no generated PRDs checked in
-- `context/FRPs/` -- no generated FRPs checked in
+- `context/FRPs/` -- no generated FRDs checked in (dir to be renamed)
 - `context/features/` -- no feature descriptions checked in
 - `context/logs/` -- no execution logs
 - `state/` -- does not exist

@@ -11,12 +11,12 @@ from pydantic import BaseModel, Field
 class PipelineStage(StrEnum):
     """Pipeline stages in execution order.
 
-    BRD/PRD/FRP are CABIO's domain (claude -p commands).
+    BRD/PRD/FRD are CABIO's domain (claude -p commands).
     Execute hands off to Ralph WT (make ralph_run).
     """
     brd = "brd"
     prd = "prd"
-    frp = "frp"
+    frd = "frd"
     execute = "execute"  # delegates to Ralph WT, not claude -p
 
 
@@ -39,7 +39,7 @@ class StageRecord(BaseModel):
     cost_usd: float = 0.0
     error: str | None = None
     retry_count: int = 0
-    feature_slug: str | None = None  # for FRP fan-out
+    feature_slug: str | None = None  # for FRD fan-out
 
 
 class Project(BaseModel):
@@ -68,12 +68,12 @@ class StateFile(BaseModel):
 ```python
 from src.models.project import PipelineStage
 
-# Registry dict mapping stage -> CC command name (BRD/PRD/FRP)
+# Registry dict mapping stage -> CC command name (BRD/PRD/FRD)
 # Execute stage is NOT a CC command -- it delegates to Ralph WT
 STAGE_COMMANDS: dict[PipelineStage, str] = {
     PipelineStage.brd: "generate-brd",
     PipelineStage.prd: "generate-prd-from-brd",
-    PipelineStage.frp: "generate-frp-from-prd",
+    PipelineStage.frd: "generate-frd-from-prd",
     # execute: handled by Ralph WT (make ralph_run), not CC command
 }
 
@@ -84,7 +84,7 @@ RALPH_INIT_COMMAND = "make ralph_init_loop"
 STAGE_ORDER: list[PipelineStage] = [
     PipelineStage.brd,
     PipelineStage.prd,
-    PipelineStage.frp,
+    PipelineStage.frd,
     PipelineStage.execute,
 ]
 ```
@@ -288,7 +288,7 @@ def workspace_root(project_id: str, company: str = "") -> Path:
 def ensure_workspace(project_id: str, company: str = "") -> Path:
     """Create project workspace with all required subdirs."""
     root = workspace_root(project_id, company)
-    for subdir in ["BRDs", "PRDs", "FRPs", "features", "logs"]:
+    for subdir in ["BRDs", "PRDs", "FRDs", "features", "logs"]:
         (root / subdir).mkdir(parents=True, exist_ok=True)
     return root
 
@@ -301,6 +301,6 @@ def prd_path(project_id: str, company: str = "") -> Path:
     return workspace_root(project_id, company) / "PRDs"
 
 
-def frp_path(project_id: str, company: str = "") -> Path:
-    return workspace_root(project_id, company) / "FRPs"
+def frd_path(project_id: str, company: str = "") -> Path:
+    return workspace_root(project_id, company) / "FRDs"
 ```

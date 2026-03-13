@@ -13,6 +13,8 @@ Claude Code agents per project.
 | [data-models.md](data-models.md) | Phase 0 Pydantic models, state store, CC bridge specs |
 | [patterns-to-port.md](patterns-to-port.md) | Reusable patterns from Agents-eval, Ralph, cc-utils-plugin |
 | [cc-integration.md](cc-integration.md) | Claude Code bridge design, settings, hooks, gotchas |
+| [competitive-landscape.md](competitive-landscape.md) | CABIO vs Paperclip, PentaGI, CrewAI, AutoGen -- feature matrix |
+| [cc-teams-org-simulation.md](cc-teams-org-simulation.md) | CC Teams mode as native org chart alternative to Paperclip |
 | [external-references.md](external-references.md) | Industry research validating CABIO's existing design decisions |
 
 ## Key Architectural Decision
@@ -21,7 +23,7 @@ Claude Code agents per project.
 "Python orchestrator calls `claude -p` automatically per project, tracking state
 and cost."
 
-**Scope boundary**: CABIO is the **business pipeline** (BRD->PRD->FRP). It does
+**Scope boundary**: CABIO is the **business pipeline** (BRD->PRD->FRD). It does
 NOT do coding. Coding is delegated to Ralph WT. Market research is delegated to
 agentic-market-research-to-gtm.
 
@@ -33,8 +35,8 @@ cc-research          cc-utils-plugin                          CABIO            R
 ┌──────────┐        ┌──────────────────────────────┐        ┌──────────┐    ┌──────────┐
 │ Documents │─→      │ Skills, Plugins, Scaffolds   │─→      │ BRD      │    │ PRD.md   │
 │ CC caps   │informs │ Hooks, Rules, Statusline     │into    │ PRD      │    │ prd.json │
-│ Hooks     │        │                              │both    │ FRP      │──→ │ TDD loop │
-│ Teams     │        │ market-research plugin:      │        │ Dashboard│FRP │ Worktrees│
+│ Hooks     │        │                              │both    │ FRD      │──→ │ TDD loop │
+│ Teams     │        │ market-research plugin:      │        │ Dashboard│FRD │ Worktrees│
 │ Settings  │        │   Source→Landscape→PMF→GTM   │        │ Cost     │as  │ Judge    │
 │ OTel      │        │   (from agentic-mkt-to-gtm)  │        │ Multi-co │PRD │ Validate │
 └──────────┘        └──────────────────────────────┘        └──────────┘    └──────────┘

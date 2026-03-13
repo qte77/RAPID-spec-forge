@@ -9,7 +9,7 @@ tracks costs, and provides dashboard visibility.
 **Architectural inversion**: Human runs make -> Python orchestrator drives CC
 agents per project automatically.
 
-**Scope boundary**: CABIO handles the business pipeline only (BRD->PRD->FRP).
+**Scope boundary**: CABIO handles the business pipeline only (BRD->PRD->FRD).
 The `execute` stage hands off to Ralph WT for TDD implementation. Market
 intelligence is sourced from `agentic-market-research-to-gtm`. See
 [ecosystem.md](ecosystem.md) for full repo relationships.
@@ -52,7 +52,7 @@ tests/test_workspace.py         (new: path resolution)
 
 ### Goal
 
-Pipeline runner, quality gates, FRP fan-out, CLI.
+Pipeline runner, quality gates, FRD fan-out, CLI.
 
 ### Files to Create
 
@@ -61,25 +61,25 @@ src/pipeline/__init__.py        (new)
 src/pipeline/runner.py          (new: run_pipeline -- iterate stages in order)
 src/pipeline/stages.py          (new: execute_stage -- build args, call bridge)
 src/pipeline/gate.py            (new: quality gate via claude -p scoring prompt)
-src/pipeline/frp_fan_out.py     (new: extract features from PRD, one FRP per feature)
+src/pipeline/frd_fan_out.py     (new: extract features from PRD, one FRD per feature)
 src/cli/__init__.py             (new)
 src/cli/main.py                 (new: argparse CLI)
 tests/test_pipeline_runner.py   (new)
 tests/test_pipeline_stages.py   (new)
 tests/test_gate.py              (new)
-tests/test_frp_fan_out.py       (new)
+tests/test_frd_fan_out.py       (new)
 ```
 
 ### Execute Stage: Ralph WT Handoff
 
 The `execute` stage does NOT call `claude -p` directly. It:
-1. Transforms the FRP into Ralph's `docs/PRD.md` format
+1. Transforms the FRD into Ralph's `docs/PRD.md` format
 2. Runs `make ralph_init_loop` (generates `prd.json` from PRD)
 3. Runs `make ralph_run` (TDD loop in git worktrees)
 4. Polls Ralph's `progress.txt` for story completion and cost
 5. Updates cockpit state with aggregated results
 
-Each feature FRP can spawn its own Ralph WT instance. This is the natural
+Each feature FRD can spawn its own Ralph WT instance. This is the natural
 parallelism point -- independent features run in parallel worktrees.
 
 See [cc-integration.md](cc-integration.md) for command mapping details and
@@ -90,7 +90,7 @@ See [cc-integration.md](cc-integration.md) for command mapping details and
 ```
 cabio project create --name "My SaaS" --company "Acme"
 cabio project list
-cabio run --project my-saas [--stage brd|prd|frp|execute]
+cabio run --project my-saas [--stage brd|prd|frd|execute]
 cabio status --project my-saas
 cabio status --all
 ```
@@ -123,7 +123,7 @@ project_run:  ## Run pipeline "ARGS=--project my-saas"
 
 ### Goal
 
-Dashboard, parallel FRP, multi-company workspace, Vibe Kanban integration.
+Dashboard, parallel FRD, multi-company workspace, Vibe Kanban integration.
 
 ### Files to Create
 
@@ -131,7 +131,7 @@ Dashboard, parallel FRP, multi-company workspace, Vibe Kanban integration.
 src/dashboard/__init__.py       (new)
 src/dashboard/table.py          (new: Rich terminal table)
 src/dashboard/summary.py        (new: cost aggregation, company grouping)
-src/pipeline/parallel.py        (new: ThreadPoolExecutor for FRP fan-out)
+src/pipeline/parallel.py        (new: ThreadPoolExecutor for FRD fan-out)
 src/integrations/__init__.py    (new)
 src/integrations/vibe_kanban.py (new: optional REST push, urllib.request)
 tests/test_dashboard.py         (new)
@@ -143,7 +143,7 @@ tests/test_vibe_kanban.py       (new)
 
 ```
 CABIO Cockpit -- 2025-03-13 14:30 UTC
-COMPANY       PROJECT        BRD       PRD       FRP       EXEC    COST
+COMPANY       PROJECT        BRD       PRD       FRD       EXEC    COST
 Acme Corp     my-saas        passed    passed    3/5       .       $0.42
 StartupXYZ    analytics      running   .         .         .       $0.09
 Total: 2 projects | 2 companies | $0.51 total cost
@@ -157,7 +157,7 @@ Total: 2 projects | 2 companies | $0.51 total cost
 ### Verification
 
 - Dashboard renders for 3+ projects fixture
-- Parallel FRP: 5 features complete, all state records correct
+- Parallel FRD: 5 features complete, all state records correct
 - Thread-safety: Hypothesis test with `threading.Barrier`
 - Cost sums match
 
@@ -171,7 +171,7 @@ Not implemented. Architecture accommodates:
 - **Triple memory**: Long-term, working, episodic per project
 - **Cost budgets**: `CostBudget` model with auto-throttle at 80%
 - **Agent runtime abstraction**: `AgentRuntime(Protocol)` with CC and Gemini
-- **Claude-as-Judge**: Compare parallel FRP implementations, pick best
+- **Claude-as-Judge**: Compare parallel FRD implementations, pick best
 - **Claude remote/mobile**: `claude --remote` for async pipeline execution
 
 ## Files Modified (Not Created)

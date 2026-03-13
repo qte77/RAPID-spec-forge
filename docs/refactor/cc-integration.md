@@ -128,7 +128,7 @@ This allows commands to adapt based on cockpit state without code changes.
 |---------------|------------|------------|-------------|
 | `brd` | `generate-brd` | `business_inputs/$FILE` | `BRDs/$FILE` |
 | `prd` | `generate-prd-from-brd` | `BRDs/$FILE` | `PRDs/$FILE` |
-| `frp` | `generate-frp-from-prd` | `PRDs/$FILE` + feature name | `FRPs/${FILE}_${FEATURE}.md` |
+| `frd` | `generate-frd-from-prd` | `PRDs/$FILE` + feature name | `FRDs/${FILE}_${FEATURE}.md` |
 
 The `STAGE_COMMANDS` registry in `src/models/pipeline.py` codifies this mapping.
 
@@ -136,10 +136,10 @@ The `STAGE_COMMANDS` registry in `src/models/pipeline.py` codifies this mapping.
 
 | Pipeline Stage | Tool | Input | Output |
 |---------------|------|-------|--------|
-| `execute` | `make ralph_init_loop && make ralph_run` | FRP transformed to `docs/PRD.md` | Working code in `src/` + `tests/` |
+| `execute` | `make ralph_init_loop && make ralph_run` | FRD transformed to `docs/PRD.md` | Working code in `src/` + `tests/` |
 
 The execute stage:
-1. Copies/transforms FRP into Ralph's `docs/PRD.md` format
+1. Copies/transforms FRD into Ralph's `docs/PRD.md` format
 2. Runs `make ralph_init_loop` (generates `prd.json`)
 3. Runs `make ralph_run` (TDD loop in git worktrees)
 4. Parses Ralph's `progress.txt` for cost and story status

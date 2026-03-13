@@ -51,7 +51,7 @@ Key elements:
 
 **Source**: `ralph/scripts/lib/teams.sh:get_unblocked_stories()`
 
-BFS dependency resolution for parallel execution. In cockpit: parallel FRP
+BFS dependency resolution for parallel execution. In cockpit: parallel FRD
 generation where features are independent.
 
 ### Vibe Kanban REST Client
@@ -67,7 +67,7 @@ REST API patterns:
 
 **Source**: `ralph/scripts/lib/judge.sh`
 
-Phase 3 pattern: compare N parallel FRP implementations, score and pick best.
+Phase 3 pattern: compare N parallel FRD implementations, score and pick best.
 Not needed until intelligence layer.
 
 ## From cc-utils-plugin

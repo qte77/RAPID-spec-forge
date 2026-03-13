@@ -24,8 +24,8 @@ Industry finding: AI amplifies both good and bad decisions. Increasing
 throughput with unclear thinking makes problems more expensive, not cheaper.
 
 **Already in CABIO**: BRD quality determines everything downstream. The
-BRD->PRD->FRP chain is inherently an amplifier -- a bad BRD produces many bad
-FRPs fast. Reinforces strict gating at BRD->PRD as the highest-leverage point.
+BRD->PRD->FRD chain is inherently an amplifier -- a bad BRD produces many bad
+FRDs fast. Reinforces strict gating at BRD->PRD as the highest-leverage point.
 
 ### 3. Cognitive Load as the Real Bottleneck
 
@@ -42,7 +42,7 @@ Industry trend: Engineer role evolving from coder to architect to "founder" --
 value in knowing **what** to build, not how.
 
 **Already in CABIO**: The cockpit IS the tool for this role. Human owns intent,
-coherence, risk. Agents own execution across BRD->PRD->FRP->Ralph WT.
+coherence, risk. Agents own execution across BRD->PRD->FRD->Ralph WT WT.
 
 ### 5. Modular Prompts Over Mega-Context
 
