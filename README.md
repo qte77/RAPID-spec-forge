@@ -4,13 +4,13 @@ Business workflow system with AI agent support. Evolving toward intelligent orch
 
 [![License](https://img.shields.io/badge/license-GNUGPLv3-green.svg)](LICENSE)
 ![Version](https://img.shields.io/badge/version-1.0.0-58f4c2)
-[![CodeQL](https://github.com/qte77/context-engineering-template/actions/workflows/codeql.yaml/badge.svg)](https://github.com/qte77/context-engineering-template/actions/workflows/codeql.yaml)
-[![CodeFactor](https://www.codefactor.io/repository/github/qte77/context-engineering-template/badge)](https://www.codefactor.io/repository/github/qte77/context-engineering-template)
-[![ruff](https://github.com/qte77/context-engineering-template/actions/workflows/ruff.yaml/badge.svg)](https://github.com/qte77/context-engineering-template/actions/workflows/ruff.yaml)
-[![pytest](https://github.com/qte77/context-engineering-template/actions/workflows/pytest.yaml/badge.svg)](https://github.com/qte77/context-engineering-template/actions/workflows/pytest.yaml)
+[![CodeQL](https://github.com/qte77/CABIO-test/actions/workflows/codeql.yaml/badge.svg)](https://github.com/qte77/CABIO-test/actions/workflows/codeql.yaml)
+[![CodeFactor](https://www.codefactor.io/repository/github/qte77/CABIO-test/badge)](https://www.codefactor.io/repository/github/qte77/CABIO-test)
+[![ruff](https://github.com/qte77/CABIO-test/actions/workflows/ruff.yaml/badge.svg)](https://github.com/qte77/CABIO-test/actions/workflows/ruff.yaml)
+[![pytest](https://github.com/qte77/CABIO-test/actions/workflows/pytest.yaml/badge.svg)](https://github.com/qte77/CABIO-test/actions/workflows/pytest.yaml)
 
-**DevEx**  [![vscode.dev](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=vscode.dev&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://vscode.dev/github/qte77/context-engineering-template)
-[![Codespace](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Codespace%20Dev&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://github.com/codespaces/new?repo=qte77/context-engineering-template&devcontainer_path=.devcontainer/devcontainer.json)
+**DevEx**  [![vscode.dev](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=vscode.dev&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://vscode.dev/github/qte77/CABIO-test)
+[![Codespace](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Codespace%20Dev&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://github.com/codespaces/new?repo=qte77/CABIO-test&devcontainer_path=.devcontainer/devcontainer.json)
 
 ## Product State & Vision
 
