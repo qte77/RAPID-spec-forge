@@ -102,6 +102,19 @@ receives a PRD and produces working code.
 | **Context sharing** | CC Teams shared context | Ticket-based message passing |
 | **Cost** | CC API costs only | CC API + infrastructure costs |
 
+## Claude Remote / Mobile
+
+`claude --remote` enables async pipeline execution from any device. Combined with
+CC Teams, the cockpit could:
+
+- Start a pipeline from mobile, monitor progress remotely
+- Run long pipelines (multi-company, full BRD->PRD->FRD->Ralph) without keeping
+  a terminal open
+- Resume sessions after disconnection
+
+This complements the CC Teams org simulation by making the cockpit accessible
+beyond the developer workstation.
+
 ## Limitations
 
 | Limitation | Impact | Mitigation |
