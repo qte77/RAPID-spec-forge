@@ -1,10 +1,14 @@
 # Data Models & Core Components (Phase 0)
 
+> **Spec sketches** -- implementation is authoritative once it exists.
+> These code blocks define the target API surface and safety rules.
+> Do not treat as copy-paste targets if `src/` has diverged.
+
 ## Models (`src/models/project.py`)
 
 ```python
 from enum import StrEnum
-from datetime import datetime
+from datetime import UTC, datetime
 from pydantic import BaseModel, Field
 
 
@@ -48,8 +52,8 @@ class Project(BaseModel):
     name: str
     company: str = ""
     description: str = ""
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     pipeline: dict[PipelineStage, StageRecord] = Field(default_factory=dict)
     workspace_path: str = ""
     tags: list[str] = Field(default_factory=list)
@@ -59,7 +63,7 @@ class Project(BaseModel):
 class StateFile(BaseModel):
     """Root state file persisted to JSON."""
     version: str = "1"
-    generated: datetime = Field(default_factory=datetime.utcnow)
+    generated: datetime = Field(default_factory=lambda: datetime.now(UTC))
     projects: dict[str, Project] = Field(default_factory=dict)
 ```
 

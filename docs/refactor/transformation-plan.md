@@ -44,6 +44,7 @@ tests/test_workspace.py         (new: path resolution)
 
 ### Verification
 
+- `state/` directory created (first visible artifact)
 - `make ruff` passes
 - `make check_types` passes
 - `make test_all` passes
@@ -165,9 +166,9 @@ Total: 2 projects | 2 companies | $0.51 total cost
 
 Not implemented. Architecture accommodates:
 
-- **Market intelligence integration**: Use `market-research` cc-utils-plugin
-  (source: `agentic-market-research-to-gtm`) to feed market data into BRD stage
-  (source analysis, landscape, PMF, GTM). See [ecosystem.md](ecosystem.md).
+- **Automated market intelligence in pipeline**: The `market-research` cc-utils-plugin
+  is available now (`claude plugin install`), but cockpit automation of invoking it
+  as a pre-BRD stage belongs here. See [ecosystem.md](ecosystem.md).
 - **Triple memory**: Long-term, working, episodic per project
 - **Cost budgets**: `CostBudget` model with auto-throttle at 80%
 - **Agent runtime abstraction**: `AgentRuntime(Protocol)` with CC and Gemini

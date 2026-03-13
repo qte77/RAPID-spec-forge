@@ -42,7 +42,7 @@ Industry trend: Engineer role evolving from coder to architect to "founder" --
 value in knowing **what** to build, not how.
 
 **Already in CABIO**: The cockpit IS the tool for this role. Human owns intent,
-coherence, risk. Agents own execution across BRD->PRD->FRD->Ralph WT WT.
+coherence, risk. Agents own execution across BRD->PRD->FRD->Ralph WT.
 
 ### 5. Modular Prompts Over Mega-Context
 
