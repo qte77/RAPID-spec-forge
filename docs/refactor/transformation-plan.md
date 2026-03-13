@@ -143,9 +143,9 @@ tests/test_vibe_kanban.py       (new)
 
 ```
 CABIO Cockpit -- 2025-03-13 14:30 UTC
-COMPANY       PROJECT        BRD       PRD       FRD       EXEC    COST
-Acme Corp     my-saas        passed    passed    3/5       .       $0.42
-StartupXYZ    analytics      running   .         .         .       $0.09
+COMPANY       PROJECT        BRD       PRD       FRD       RALPH     COST
+Acme Corp     my-saas        passed    passed    3/5       2/3       $0.42
+StartupXYZ    analytics      running   .         .         .         $0.09
 Total: 2 projects | 2 companies | $0.51 total cost
 ```
 

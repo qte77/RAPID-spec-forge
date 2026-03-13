@@ -47,7 +47,7 @@ Add to existing `env` section:
 - `DISABLE_GIT_INSTRUCTIONS`: Save tokens in automated loops
 - `DISABLE_NONESSENTIAL_TRAFFIC`: Reduce noise in headless runs
 
-### Future Env Vars (Phase 3)
+### Additional Env Vars (when needed)
 
 ```json
 {

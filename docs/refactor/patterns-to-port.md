@@ -29,13 +29,6 @@ Key elements to reuse:
 Replace repeated `if/elif/else` over stage types with a single registry dict
 (`STAGE_COMMANDS`). Validates once at entry point.
 
-### BERTScore Class-Level Lazy Loading
-
-**Source**: `src/app/judge/traditional_metrics.py`
-
-Pattern for expensive singletons: class-level instance + failure caching. Applies
-to CC bridge health checks.
-
 ## From Ralph Loop
 
 ### Atomic JSON State
