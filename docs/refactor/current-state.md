@@ -78,11 +78,6 @@
 | `CABIO-implementation-guide.md` | Technical specs, compliance, UX |
 | `architecture/` | PlantUML diagrams (current, SMB, enterprise) |
 
-### Examples (`examples/mcp-server-client/`)
-
-Complete MCP server-client implementation (Python). Generated via legacy FRD
-workflow. Has its own `src/`, `tests/`, full GUI.
-
 ## What Is Empty / Minimal
 
 - `src/` -- no application logic

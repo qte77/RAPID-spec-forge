@@ -11,7 +11,7 @@
 ENV_FILE := .env
 SRC_PATH := src
 APP_PATH := $(SRC_PATH)
-EXAMPLES_PATH := examples/mcp-server-client
+
 PLANTUML_CONTAINER := plantuml/plantuml:latest
 PLANTUML_SCRIPT := scripts/generate-plantuml-png.sh
 
@@ -249,21 +249,6 @@ coverage_all:  ## Get test coverage with hypothesis tests
 
 # MARK: run
 
-
-run_example_gui:  ## Launch MCP server-client example GUI
-	$(MAKE) -C $(EXAMPLES_PATH) run_gui
-
-
-run_example_server:  ## Run MCP server-client example server
-	$(MAKE) -C $(EXAMPLES_PATH) run_server
-
-
-run_example_client:  ## Run MCP server-client example client
-	$(MAKE) -C $(EXAMPLES_PATH) run_client ARGS="$(ARGS)"
-
-
-run_example_full: ## Run MCP server-client example with Docker Compose
-	$(MAKE) -C $(EXAMPLES_PATH) run_full ARGS="$(ARGS)"
 
 
 # MARK: help

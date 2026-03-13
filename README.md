@@ -129,6 +129,6 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 ## Documentation
 
 - **[Usage Guide](docs/usage-guide.md)** - Detailed workflow instructions
-- **[Examples](docs/examples.md)** - Complete examples and demonstrations
+
 - **[AGENTS.md](AGENTS.md)** - Agent configuration and behavior
-- **[examples/mcp-server-client/](examples/mcp-server-client/)** - Working MCP implementation, implemented with legacy custom commands workflow
+
