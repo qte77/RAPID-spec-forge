@@ -143,7 +143,7 @@ tests/test_vibe_kanban.py       (new)
 ### Dashboard Output
 
 ```
-CABIO Cockpit -- 2025-03-13 14:30 UTC
+CABIO Cockpit -- 2026-03-13 14:30 UTC
 COMPANY       PROJECT        BRD       PRD       FRD       RALPH     COST
 Acme Corp     my-saas        passed    passed    3/5       2/3       $0.42
 StartupXYZ    analytics      running   .         .         .         $0.09
