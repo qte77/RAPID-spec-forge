@@ -4,13 +4,15 @@ This directory contains the source files for the Context Engineering Template's 
 
 ## Purpose
 
-The diagrams illustrate the evolution of the business-driven development workflow from current template-based system to full CABIO (Context-Aware Business Intelligence Orchestration) implementation:
+The diagrams illustrate the evolution of the business-driven development workflow from current template-based system to the CABIO Python orchestration cockpit:
 
-- **Current State**: Template-based BRD→PRD→FRP workflow with AI agent support
-- **Enhanced Templates (8-12 weeks)**: Agent orchestration with context compression and market integration  
-- **Enterprise CABIO (12+ months)**: Real-time business intelligence with enterprise scalability
+- **Current State**: Template-based BRD→PRD→FRP workflow with AI agent support — *accurate baseline*
+- **SMB (Enhanced Templates)**: Agent orchestration with context compression — *aspirational; does not reflect the current cockpit design (see note below)*
+- **Enterprise CABIO**: Real-time business intelligence with enterprise scalability — *Phase 3 aspirational*
 
 All diagrams prominently feature the **Implementation (Key USP)** section, demonstrating how the system transforms business analysis into working code - the critical differentiator from traditional business intelligence tools.
+
+> **Alignment note**: The SMB and Enterprise PlantUML diagrams show a 3-parallel-agent model that predates the Python cockpit + CC bridge architecture defined in [transformation-plan.md](../refactor/transformation-plan.md). They remain as aspirational reference but will be updated post-implementation to reflect the actual cockpit design (ADR-002: CABIO never codes — it orchestrates CC agents).
 
 ## Rendering
 
@@ -50,7 +52,7 @@ Alternative method using [PlantUML.com](http://www.plantuml.com/plantuml/) web s
 1. **Modify include paths** for online compatibility:
 
    ```plantuml
-   !include https://raw.githubusercontent.com/qte77/context-engineering-template/main/docs/architecture/styles/github-dark.puml
+   !include https://raw.githubusercontent.com/qte77/CABIO-test/main/docs/architecture/styles/github-dark.puml
    ```
 
 2. **Copy modified PlantUML source** and paste into the web interface
