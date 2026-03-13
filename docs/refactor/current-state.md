@@ -50,8 +50,6 @@
 **Dev tooling**: `setup_dev`, `ruff`, `check_types`, `test_all`,
 `test_hypothesis_*`, `coverage_all`
 
-**Examples**: `run_example_gui`, `run_example_server`, `run_example_client`
-
 ### Source Code (`src/`)
 
 **Effectively empty.** Only:
@@ -75,7 +73,7 @@
 |------|---------|
 | `CABIO-vision.md` | Why CABIO matters |
 | `CABIO-product-roadmap.md` | Customer value, phases, timeline |
-| `CABIO-implementation-guide.md` | Technical specs, compliance, UX |
+| ~~`CABIO-implementation-guide.md`~~ | Deleted — superseded by `docs/refactor/` |
 | `architecture/` | PlantUML diagrams (current, SMB, enterprise) |
 
 ## What Is Empty / Minimal

@@ -357,9 +357,6 @@ See [Standard Workflow Commands](#standard-workflow-commands) for fast validatio
 | `make setup_dev` | Install all dev dependencies | Makefile exists, uv installed | Try `uv sync --all-groups` directly |
 | `make setup_claude_code` | Setup with Claude Code CLI | Above + Claude Code available | Manual setup per Claude docs |
 | `make setup_gemini_cli` | Setup Gemini CLI | Above + npm available | Manual setup per Gemini docs |
-| `make run_example_gui` | Run example GUI | Dev environment setup | Try manual execution of example |
-| `make run_example_server` | Run example server | Above | Try manual execution of example |
-| `make run_example_client` | Run example client | Above | Try manual execution of example |
 | `make ruff` | Format code and fix linting | Ruff installed | Try `uv run ruff format . && uv run ruff check . --fix` |
 | `make check_types` | Run pyright static type checking | pyright installed | Try `uv run pyright $APP_PATH` |
 | `make test_all` | Run all hypothesis tests | Hypothesis installed | Try `for test_file in tests/test_*.py; do uv run python "$test_file"; done` |

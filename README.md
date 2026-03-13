@@ -81,8 +81,7 @@ Building on proven BRD→PRD→FRP foundation, CABIO represents our evolution pa
 ### Learn More
 
 - **[CABIO Vision](docs/CABIO-vision.md)** - Why business intelligence should be automated and contextual
-- **[CABIO Product Roadmap](docs/CABIO-product-roadmap.md)** - Customer value, target markets, and feature development  
-- **[CABIO Implementation Guide](docs/CABIO-implementation-guide.md)** - Technical architecture and implementation roadmap
+- **[CABIO Product Roadmap](docs/CABIO-product-roadmap.md)** - Customer value, target markets, and feature development
 
 **Development**: Iterative approach starting with enhanced templates for small teams (8-12 weeks), then agent orchestration, expanding based on validation and user feedback. Current BRD→PRD→FRP workflow remains the foundation.
 

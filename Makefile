@@ -4,7 +4,7 @@
 
 .SILENT:
 .ONESHELL:
-.PHONY: all setup_dev setup_prod setup_uv setup_claude_code setup_plantuml brd_gen_claude prd_gen_claude frp_gen_claude frp_exe_claude frp_gen_legacy_claude frp_exe_legacy_claude run_puml_interactive run_puml_single ruff test_all test_hypothesis_verbose test_hypothesis_quick test_hypothesis_thorough test_single test_debug check_types coverage_all output_unset_app_env_sh run_example_gui run_example_server run_example_client run_example_full help
+.PHONY: all setup_dev setup_prod setup_uv setup_claude_code setup_plantuml brd_gen_claude prd_gen_claude frp_gen_claude frp_exe_claude frp_gen_legacy_claude frp_exe_legacy_claude run_puml_interactive run_puml_single ruff test_all test_hypothesis_verbose test_hypothesis_quick test_hypothesis_thorough test_single test_debug check_types coverage_all output_unset_env_sh help
 .DEFAULT_GOAL := help
 
 

@@ -35,6 +35,5 @@ Note: Update this file according to project needs.
 - `CTX_PRD_TEMPLATE = ${CTX_TEMPLATES_PATH}/prd_base.md`: Template for creating product requirements documents.
 - `CTX_FRP_TEMPLATE = ${CTX_TEMPLATES_PATH}/frp_base.md`: Template for creating feature requirements prompts.
 - `CHANGELOG_PATH = CHANGELOG.md`: Contains the most important changes made in each version of the project.
-- `LLMSTXT_PATH = ${DOCS_PATH}/llms.txt`: Contains the flattened project, i.e., the structure and content of the project in one text file to be ingested by LLMs. Might not reflect the current project state depending on update strategy.
 - `PRD_PATH = ${DOCS_PATH}/PRD.md`: Contains the product requirements definitions for this project.
 - `PROJECT_REQUIREMENTS = pyproject.toml`: Defines meta data like package name, dependencies and tool settings.
