@@ -26,6 +26,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+
+- `docs/llms.txt` — flattened project file, replaced by direct context ingestion
+- `docs/examples.md` — examples documentation, examples/ directory deleted
+- `examples/` — example application directory
+- `docs/CABIO-implementation-guide.md` — superseded by `docs/refactor/` plan
+- `.github/workflows/write-llms-txt.yaml` — workflow that regenerated deleted llms.txt
+- Orphaned example screenshots from `assets/images/`
+
+### Changed
+
+- `docs/CABIO-vision.md` — reframed from "enhanced templates in 8-12 weeks" to Python orchestration cockpit
+- `docs/CABIO-product-roadmap.md` — aligned phases with `docs/refactor/transformation-plan.md` (Phase 0-3)
+- `docs/architecture/README.md` — fixed stale repo URL, added alignment note for SMB/Enterprise diagrams
+
+### Fixed
+
+- Dangling references to deleted files in mkdocs.yaml, paths.md, Makefile, README.md, AGENTS.md
+- Makefile `.PHONY` referencing deleted example recipes and misnamed `output_unset_app_env_sh`
+- `.cline/config.json` referencing non-existent `src/app/app.py` (fixed to `src/main.py`)
+
 ## [1.0.0] - 2025-08-10
 
 ### Added

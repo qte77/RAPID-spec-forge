@@ -21,7 +21,7 @@
     "AGENTS.md",
     "context/config/paths.md",
     "pyproject.toml",
-    "src/app/app.py"
+    "src/main.py"
   ],
   "ignore_patterns": [
     "*.pyc",
