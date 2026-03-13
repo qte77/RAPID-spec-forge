@@ -13,9 +13,11 @@ Claude Code agents per project.
 | [data-models.md](data-models.md) | Phase 0 Pydantic models, state store, CC bridge specs |
 | [patterns-to-port.md](patterns-to-port.md) | Reusable patterns from Agents-eval, Ralph, cc-utils-plugin |
 | [cc-integration.md](cc-integration.md) | Claude Code bridge design, settings, hooks, gotchas |
-| [competitive-landscape.md](competitive-landscape.md) | CABIO vs Paperclip, PentaGI, CrewAI, AutoGen -- feature matrix |
+| [competitive-landscape.md](competitive-landscape.md) | CABIO vs Paperclip, aidoc-flow, CrewAI, AutoGen -- feature matrix |
 | [cc-teams-org-simulation.md](cc-teams-org-simulation.md) | CC Teams mode as native org chart alternative to Paperclip |
 | [external-references.md](external-references.md) | Industry research validating CABIO's existing design decisions |
+| [architecture.md](architecture.md) | Architectural decisions log (ADR) |
+| [naming-candidates.md](naming-candidates.md) | CABIO replacement name candidates |
 
 ## Key Architectural Decision
 
