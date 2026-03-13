@@ -4,9 +4,9 @@ What we're building and the value it delivers
 
 ## Value Proposition
 
-**Enhanced business analysis templates for small teams (5-25 people), evolving toward intelligent orchestration.**
+**Python orchestration cockpit for the BRD→PRD→FRD pipeline, managing multiple projects across multiple companies with cost tracking and quality gates.**
 
-CABIO transforms the current template-based BRD→PRD→FRP workflow through agent orchestration and context compression - starting with enhanced templates (8-12 weeks), building toward comprehensive business intelligence automation (12+ months).
+CABIO transforms the current make-command workflow into a Python orchestrator that drives Claude Code agents, tracks costs, enforces quality gates, and provides dashboard visibility. See [transformation-plan.md](refactor/transformation-plan.md) for the authoritative engineering plan.
 
 ## Customer Pain Points & Gains
 
@@ -20,28 +20,28 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 
 ### Customer Gains with CABIO
 
-- **Enhanced Structure**: Professional business analysis workflow with improved templates and agent orchestration
-- **Reduced Manual Work**: Agent orchestration and context compression minimize template refinement time
-- **Faster Analysis**: Generate structured BRDs in hours with less manual editing required
+- **Automated Pipeline**: Cockpit auto-chains BRD→PRD→FRD stages with quality gate scoring
+- **Multi-Project Visibility**: Dashboard shows all projects, stages, costs across companies
+- **Reduced Manual Work**: Quality gates and fan-out replace manual orchestration
 - **Professional Output**: Business documentation ready for stakeholders and implementation
 
 ## Target Customers
 
-### Primary Markets (Phase 1: Small Teams First)
+### Primary Markets
 
-1. **Small Teams & Startups (5-25 people)** - *Primary Focus*
+1. **Small Teams & Startups (5-25 people)** — *Primary Focus*
 
    - Need structured business analysis but lack dedicated roles
    - Making critical product decisions with limited resources
    - Want professional business intelligence without complexity
 
-2. **Solo Entrepreneurs & Founders** - *Core Market*
+2. **Solo Entrepreneurs & Founders** — *Core Market*
 
    - Making business decisions without analysis resources
    - Need validation for product ideas and market strategies
    - Want professional business documentation for investors
 
-3. **Small Consulting Firms** - *Early Adopters*
+3. **Small Consulting Firms** — *Early Adopters*
 
    - Need to deliver business analysis quickly for clients
    - Want consistent, high-quality frameworks at small team scale
@@ -49,190 +49,113 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 
 ### Secondary Markets (Future Phases)
 
-1. **SMB Companies (25-100 people)** - *Phase 2 Expansion*
+1. **SMB Companies (25-100 people)** — *Phase 2 Expansion*
 
    - Growing teams needing scalable business intelligence
    - Multiple product lines requiring coordinated analysis
 
-2. **Enterprise Teams** - *Long-term Vision (1-1.5 years)*
+2. **Enterprise Teams** — *Phase 3 / Future*
 
    - Complex market dynamics and real-time intelligence needs
    - Advanced workflow integration and compliance requirements
 
 ## Implementation Phases
 
-### Phase 1: Enhanced Templates (8-12 weeks)
+### Phase 0: Foundation (Week 1)
 
-- [ ] **Agent Orchestration**: Automated handoffs between specialized AI agents
-- [ ] **Context Compression**: Smart information filtering and allocation to relevant agents
-- [ ] **Market Research Integration**: Templates with competitive analysis frameworks
-- [ ] **Streamlined Workflow**: Reduced manual editing and refinement time
+- [ ] **Data Models**: Pydantic models for PipelineStage, StageStatus, StageRecord, Project, StateFile
+- [ ] **State Persistence**: JSON persistence with atomic writes
+- [ ] **CC Bridge**: `claude -p` subprocess wrapper for headless execution
+- [ ] **Workspace Isolation**: Project-level path resolvers
 
-### Phase 2: Business Intelligence Integration (12+ months)
+### Phase 1: Single-Project Orchestration (Weeks 2-3)
 
-- [ ] **Real-time Market Data**: Live connections to business intelligence sources
-- [ ] **Advanced Competitive Analysis**: Automated competitor research and monitoring
-- [ ] **Template Quality Enhancement**: Professional business documentation frameworks
-- [ ] **Context Quality Control**: Ensure no critical business insights get lost
+- [ ] **Pipeline Runner**: Auto-chain BRD→PRD→FRD stages in order
+- [ ] **Quality Gates**: CC-scored quality assessment between stages
+- [ ] **FRD Fan-Out**: Extract features from PRD, generate one FRD per feature
+- [ ] **Execute Handoff**: FRD→Ralph WT for TDD implementation
+- [ ] **CLI**: `cabio project create`, `cabio run`, `cabio status`
 
-### Phase 3: Enterprise Scalability (Future)
+### Phase 2: Multi-Project Cockpit (Weeks 3-4)
 
-- [ ] **Enterprise Architecture**: High-availability, compliance-ready systems
-- [ ] **Advanced Context Management**: Memory systems with intelligent retention
-- [ ] **Multi-Model Optimization**: Cost-effective model selection for different tasks
-- [ ] **Human Oversight Integration**: Approval workflows for high-stakes decisions
+- [ ] **Dashboard**: Rich terminal table showing projects, stages, costs
+- [ ] **Parallel FRD**: ThreadPoolExecutor for concurrent FRD generation
+- [ ] **Multi-Company**: Workspace isolation per company, cost aggregation
+- [ ] **Vibe Kanban Integration**: Optional REST push for project tracking
+
+### Phase 3: Intelligence Layer (Future — Design Only)
+
+Not implemented. Architecture accommodates:
+
+- [ ] **Automated Market Intelligence**: Pre-BRD stage using market-research plugin
+- [ ] **Memory Systems**: Long-term, working, episodic per project
+- [ ] **Cost Budgets**: Auto-throttle at 80% of budget
+- [ ] **Agent Runtime Abstraction**: Protocol for CC and Gemini backends
+- [ ] **MCP / Real-Time Data**: Live connections to business intelligence sources
 
 ## Core Technology Stack
 
-- **Claude Code CLI**: Native sub-agent support and orchestration
-- **MCP Servers**: Real-time business intelligence data
-- **Context Engineering**: Smart information filtering and allocation  
-- **Production Infrastructure**: Enterprise-grade monitoring and scaling
+- **Python**: Orchestration cockpit, Pydantic models, CLI
+- **Claude Code CLI**: `claude -p` headless execution for pipeline stages
+- **Ralph WT**: TDD implementation via git worktrees (execute stage handoff)
+- **Rich** (optional): Terminal dashboard rendering
 
 ## Expected Benefits
 
-### Context Efficiency
+### Pipeline Automation
 
-- **Context Compression & Allocation**: Smart routing of compressed business context to appropriate agents based on need-to-know principles
-- **Focused Processing**: Agents receive only relevant information for their specific role
-- **Scalable Workflow**: Maintains performance as project complexity grows
+- **Auto-Chaining**: Stages run in sequence without manual intervention
+- **Quality Gates**: Failed stages block progression with actionable feedback
+- **Fan-Out**: Multiple FRDs generated in parallel from a single PRD
 
-### Business Intelligence
+### Cost Visibility
 
-- **Real Data**: Live market data, competitor analysis, financial metrics
-- **Automated Research**: Reduces manual research time by 70-90%
-- **Data-Driven Decisions**: Evidence-based business requirements
+- **Per-Stage Tracking**: Token usage and cost logged per CC invocation
+- **Per-Project Aggregation**: Dashboard shows total cost per project
+- **Per-Company Rollup**: Multi-company cost reporting
 
-### Workflow Automation
+### Multi-Project Management
 
-- **Hands-Off Processing**: Automatic agent handover and session management
-- **Quality Assurance**: Built-in validation and error recovery
-- **Reproducible Results**: Consistent output across different projects
-
-### Production-Ready Benefits (Phase 7)
-
-- **Enterprise-Grade Reliability**: Twelve-factor agent design ensures scalable, maintainable systems
-- **Intelligent Context Management**: Memory decay reduces token usage while preserving critical information
-- **Human Oversight Integration**: Built-in approval workflows for high-stakes business decisions
-- **Multi-Model Optimization**: Cost-effective model selection based on task complexity
-- **Structured Quality Gates**: Extract-Resolve-Enrich pattern ensures consistent, high-quality outputs
+- **Workspace Isolation**: Each project has independent state and artifacts
+- **Dashboard**: Single view across all projects and companies
+- **Parallel Execution**: Independent projects and features run concurrently
 
 ## Risks & Mitigation
 
 ### Technical Risks
 
-- **MCP Server Reliability**: Implement fallback to template-based analysis
-- **Context Compression Accuracy**: Extensive testing with validation hooks
-- **Sub-Agent Performance**: Monitor latency and implement timeout handling
+- **CC Bridge Reliability**: Implement retries and timeout handling for `claude -p`
+- **State Persistence**: Atomic writes prevent corruption on interruption
+- **Quality Gate Accuracy**: Iterative calibration of scoring prompts
 
 ### Process Risks
 
-- **Learning Curve**: Comprehensive documentation and migration guide
-- **Backward Compatibility**: Maintain legacy workflow alongside CABIO
-- **Data Privacy**: Secure credential management and data handling policies
+- **Learning Curve**: CLI mirrors existing `make` command patterns
+- **Backward Compatibility**: Existing make recipes remain functional
+- **Data Privacy**: Workspace isolation prevents cross-project data leakage
 
-### Production Risks (Phase 7)
+## Success Metrics
 
-- **Model Dependency**: Mitigate with fallback models and graceful degradation
-- **Human-Loop Bottlenecks**: Implement smart escalation and delegation rules
-- **Configuration Complexity**: Use infrastructure-as-code and automated deployment
-- **Memory Decay Accuracy**: Extensive testing with validation checkpoints
+### Phase 0-1 Success Criteria
 
-## Timeline Estimate
+- [ ] **Pipeline Completion**: Single project runs BRD→PRD→FRD→Execute end-to-end
+- [ ] **Quality Gates**: Stages blocked on low-quality output, re-run succeeds
+- [ ] **State Persistence**: Pipeline resumes after interruption from last completed stage
+- [ ] **Tests Pass**: `make ruff`, `make check_types`, `make test_all` all green
 
-### Enhanced Templates Timeline (Small Teams Focus)
+### Phase 2 Success Criteria
 
-- **Phase 1**: 8-12 weeks (Agent orchestration + Context compression + Enhanced templates)
-
-**Total Enhanced Templates**: 8-12 weeks
-
-### Full CABIO Timeline (Future Phases)
-
-- **Phase 2**: 12+ months (Real-time business intelligence + Advanced features)
-- **Phase 3**: Future (Enterprise architecture & compliance)
-
-**Total Full CABIO**: 12-18+ months
-
-## Market Applications & Commercialization Opportunities
-
-### Target Market Segments
-
-1. Multi-Agent Infrastructure Platform
-
-   - **Problem**: Multi-agent systems are complex to build and orchestrate effectively
-   - **CABIO Solution**: Context-aware orchestration platform for enterprise agent workflows
-   - **Market**: B2B SaaS for companies building AI agent systems, enterprise software teams
-   - **Revenue Model**: Platform licensing + usage-based pricing
-
-2. AI-Native Business Intelligence Suite
-
-   - **Problem**: Traditional BI tools lack AI-native architecture and contextual intelligence
-   - **CABIO Solution**: Complete BRD→PRD→FRP workflow with real-time business intelligence
-   - **Market**: Enterprise product teams, consulting firms, startups, SMBs
-   - **Revenue Model**: Subscription tiers based on analysis complexity and team size
-
-3. Small Team Productivity Amplifier
-
-   - **Problem**: 10-person companies need enterprise-level business analysis but lack dedicated roles
-   - **CABIO Solution**: "CABIO Lite" - simplified single-agent mode that scales to multi-agent orchestration
-   - **Market**: Small companies, consulting firms, agencies, bootstrapped startups
-   - **Revenue Model**: Affordable tiers designed for small teams ($99-499/month)
-   - **TODO**: Decide whether to start with CABIO Lite or implement scaling later
-
-4. Professional Development & Training Platform
-
-- **Problem**: Rapid skill development needed for business analysis and product management
-- **CABIO Solution**: AI-powered training using real business scenarios and structured frameworks
-- **Market**: Corporate training, professional development, individual skill building
-- **Revenue Model**: Course subscriptions + enterprise training contracts
-
-### Commercial Extensions
-
-### Phase 8: Market Validation & Product Development
-
-- [ ] **Multi-Agent Infrastructure MVP**: Package CABIO as agent orchestration platform
-- [ ] **Small Team Solution**: Create simplified version for 10-person companies
-  - [ ] One-click business analysis workflows
-  - [ ] Automated market research and competitive intelligence
-  - [ ] Self-service business requirements generation
-- [ ] **Enterprise BI Pilot**: Deploy with 3-5 companies for business requirements automation
-- [ ] **Training Platform Prototype**: Create business analysis skill development courses
-- [ ] **Market Research**: Validate demand across different company sizes and sectors
-- [ ] **Validation Gates**: Add workflow restart triggers when business assumptions are invalidated (outlook)
-
-### Enterprise Evolution (12-18 Months Outlook)
-
-- [ ] **Real-Time Market Data**: Live connections to Google Analytics, Crunchbase, social media APIs
-- [ ] **Advanced Competitive Intelligence**: Automated competitor research and systematic monitoring
-- [ ] **Enterprise Architecture**: High-availability, compliance-ready systems with >99.5% uptime
-- [ ] **Advanced Context Management**: Memory systems with intelligent decay and retention
-- [ ] **Business Validation Framework**: Hypothesis testing with measurable business predictions
-- [ ] **Human Oversight Integration**: Approval workflows for high-stakes business decisions
-- [ ] **Multi-Model Optimization**: Cost-effective model selection achieving 40%+ cost reduction
-
-## Success Metrics & Examples
-
-### Enhanced Templates Success Criteria (8-12 weeks)
-
-- [ ] **Workflow Completion**: Sarah (startup founder) uses enhanced templates → receives structured BRD requiring 50% less manual editing
-- [ ] **Agent Orchestration**: Business input automatically routed to appropriate agents with context compression
-- [ ] **Template Quality**: Generated BRDs include structured sections with market research integration
-- [ ] **User Adoption**: 80%+ of users complete enhanced workflow without external help
-
-### Enterprise Metrics Examples (12-18 Months Outlook)
-
-- [ ] **System Reliability**: >99.5% uptime for business-critical analysis workflows
-- [ ] **Cost Optimization**: Multi-model routing achieves 40%+ cost reduction (e.g., use Claude-3.5-Sonnet for complex analysis, GPT-4o-mini for template formatting)
-- [ ] **Processing Speed**: Complete competitive analysis including real-time data in <30 minutes vs 2-3 days manual research
-- [ ] **Context Intelligence**: Memory decay preserves 95%+ of critical business insights while reducing token usage by 60%
+- [ ] **Dashboard Renders**: 3+ projects across 2+ companies display correctly
+- [ ] **Parallel FRD**: 5 features complete with correct state records
+- [ ] **Cost Accuracy**: Dashboard sums match individual stage costs
 
 ## Next Steps
 
-1. **Build Core Features (Phases 1-3)**: Agent orchestration and context management
-2. **Add Real Intelligence (Phase 4)**: Live business data integration
-3. **Production Polish (Phases 5-6)**: Enterprise deployment and documentation
-4. **Market Validation (Phase 8)**: Deploy with pilot customers and measure results
+1. **Phase 0**: Data models, state store, CC bridge, workspace isolation
+2. **Phase 1**: Pipeline runner, quality gates, FRD fan-out, CLI
+3. **Phase 2**: Dashboard, parallel FRD, multi-company
+4. **Phase 3**: Intelligence layer (design only, implemented when validated)
 
 ---
 
-*This document will be updated as implementation progresses and requirements evolve.*
+*This document will be updated as implementation progresses. See [transformation-plan.md](refactor/transformation-plan.md) for detailed file lists and verification steps.*
