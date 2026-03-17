@@ -29,6 +29,18 @@ Key elements to reuse:
 Replace repeated `if/elif/else` over stage types with a single registry dict
 (`STAGE_COMMANDS`). Validates once at entry point.
 
+### Parallel CC Invocation
+
+**Source**: `polyforge/scripts/cc-parallel.sh` (formerly Agents-eval)
+
+Key elements to reuse:
+- `claude -p` with presets (`validate`, `status`, `security`)
+- JSON output parsing with `jq` for `cost_usd`/`session_cost`
+- Cost aggregation across parallel subprocesses
+- PID tracking + wait-based result collection
+
+Directly informs `cc_bridge.py`'s parallel FRD execution in Phase 2.
+
 ## From Ralph Loop
 
 ### Atomic JSON State
@@ -121,6 +133,7 @@ components.
 | Pattern | Source | Target | Phase |
 |---------|--------|--------|-------|
 | Subprocess CC bridge | Agents-eval cc_engine | `src/runner/cc_bridge.py` | 0 |
+| Parallel CC invocation | polyforge cc-parallel.sh | `src/runner/cc_bridge.py` | 2 |
 | Atomic JSON state | Ralph prd.json | `src/store/state_store.py` | 0 |
 | Registry dict dispatch | AGENT_LEARNINGS | `src/models/pipeline.py` | 0 |
 | Workspace isolation | Paperclip multi-company | `src/runner/workspace.py` | 0 |

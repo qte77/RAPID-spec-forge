@@ -77,6 +77,31 @@ Add to existing `env` section:
 Hooks are designed for interactive sessions. The cockpit should handle events
 on the Python side for headless runs rather than relying on CC hooks.
 
+## Cross-Repo Access (User-Level Settings)
+
+Use `permissions.additionalDirectories` + `sandbox.filesystem.allowWrite` in
+`~/.claude/settings.json` (user-level, not per-project). This gives any CC
+session cross-repo access without per-project config or session restarts.
+
+- `additionalDirectories`: Expands Read/Write/Edit tool scope beyond CWD
+- `allowWrite` (additive): Expands Bash sandbox write access, merges with per-project configs
+
+```json
+{
+  "permissions": { "additionalDirectories": ["/workspaces"] },
+  "sandbox": { "filesystem": { "allowWrite": ["/workspaces"] } }
+}
+```
+
+**DRY consolidation**: Since `allowWrite` merges across scopes, project-level
+`sandbox.filesystem` is redundant. User-level is the single source of truth.
+Project-level settings should only contain project-specific concerns (`env`,
+`permissions`, `plugins`, `statusLine`).
+
+**Credential friction**: Best long-term fix is Codespaces encrypted secrets
+via `containerEnv`. The PAT is injected at container start, visible to all
+processes including CC sandbox. No `source`, no `.env`, no read permission issues.
+
 ## Known Gotchas
 
 ### 1. Teams Artifacts Ephemeral in Print Mode

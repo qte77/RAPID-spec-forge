@@ -1,9 +1,10 @@
 # Ecosystem: How the Repos Fit Together
 
-## Five Repos, Five Roles
+## Six Repos, Six Roles
 
 | Repo | Local Path | Role | Depends On |
 |------|-----------|------|------------|
+| **polyforge** | `/workspaces/qte77/polyforge` | Polyrepo dev forge. Parallel AI agent orchestration, credential management, status dashboard, VS Code multi-root workspace. NOT a business tool. | Nothing |
 | **cc-research** | `/workspaces/qte77/claude-code-research` | Knowledge base. Documents CC capabilities, hooks, teams, skills, settings. Read-only reference. | Nothing |
 | **cc-utils-plugin** | `/workspaces/qte77/claude-code-utils-plugin` | Tooling layer. Provides installable skills, plugins, scaffolds, hooks, rules consumed by all projects. Includes market-research plugin. | cc-research (informs design) |
 | **market-research-to-gtm** | `github.com/qte77/agentic-market-research-to-gtm` | Source repo for the market research plugin. Packaged and distributed via cc-utils-plugin. | cc-utils-plugin (distribution) |
@@ -32,6 +33,7 @@ Ralph WT (coding pipeline)                    Ralph WT (coding pipeline)
 
 | Repo | Does NOT |
 |------|----------|
+| **polyforge** | Run business logic. Only dev infrastructure (scripts, workspace file, settings templates). |
 | **cc-research** | Produce code, plugins, or runtime artifacts. Never imported. |
 | **cc-utils-plugin** | Execute business logic or coding. Provides tools others use. |
 | **market-research-to-gtm** | Run standalone. Distributed as cc-utils-plugin. Source repo for plugin development only. |
