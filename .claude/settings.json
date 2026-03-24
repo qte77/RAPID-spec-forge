@@ -3,6 +3,10 @@
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
     "DISABLE_TELEMETRY": "1"
   },
+  "attribution": {
+    "commit": "Co-Authored-By: Claude <noreply@anthropic.com>",
+    "pr": "Generated with Claude <noreply@anthropic.com>"
+  },
   "statusLine": {
     "enabled": true,
     "format": "🤖 Claude Code | {cwd} | {branch} | {time}",
@@ -67,5 +71,16 @@
       "Edit(context/**/*.md)",
       "Edit(CLAUDE.md)"
     ]
+  },
+  "enabledPlugins": {
+    "commit-helper@qte77-claude-code-utils": true
+  },
+  "extraKnownMarketplaces": {
+    "qte77-claude-code-utils": {
+      "source": {
+        "source": "github",
+        "repo": "qte77/claude-code-utils-plugin"
+      }
+    }
   }
 }
