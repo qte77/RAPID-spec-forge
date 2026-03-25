@@ -21,9 +21,33 @@ Business workflow system with AI agent support. Evolving toward intelligent orch
 - Business Requierements can be provided via complete requirements template, description or iterative process
 - Cline and Gemini configurations are present as fall-back solutions.
 
-### CABIO Vision
+### RAPID Vision
 
-- **Context-aware business intelligence orchestration** (CABIO) evolving from enhanced templates with agent orchestration (8-12 weeks) to real-time market data integration and enterprise scalability (12+ months)
+> **Formerly CABIO** (Context-Aware Business Intelligence Orchestration).
+> Renamed to **RAPID-spec-forge** (Requirements-to-Agent Pipeline &
+> Implementation Driver: Spec Forge) to better reflect the tool's function
+> as a requirements pipeline orchestrator rather than a business analytics
+> platform.
+> Legacy repo: [qte77/CABIO-test](https://github.com/qte77/CABIO-test)
+
+- **RAPID-spec-forge** evolving from enhanced templates with agent orchestration (8-12 weeks) to real-time market data integration and enterprise scalability (12+ months)
+
+### Business Analytics Outlook
+
+RAPID focuses on requirements orchestration (BRD→PRD→FRD), but analytics
+capabilities can be layered on top via existing ecosystem repos:
+
+| Capability | Source | Integration |
+|-----------|--------|-------------|
+| Market research & GTM analysis | `pmf-gtm` / `agentic-market-research-to-gtm` | Feed market data into BRDs |
+| Coding agent evaluation metrics | `ai-agents-research` | Inform agent selection per FRD |
+| Product lifecycle tracking | `sdlc-lcm-manager` | Phase-aware dashboards |
+| Cost/token tracking | OTel metrics from CC runs | Budget per BRD→FRD cycle |
+| Quality trend analysis | `make validate` + test coverage history | Trend per sprint/product |
+
+Future: if analytics become a first-class concern, extract to a dedicated
+analytics module or integrate with Tuleap CE (see
+[oss-alm-landscape.md](https://github.com/qte77/ai-agents-research/blob/main/docs/sdlc-lcm/oss-alm-landscape.md)).
 
 ## Quick Start
 
