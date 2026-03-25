@@ -72,7 +72,7 @@ Structured `BRD → PRD → FRP` workflow with AI agent configurations. Currentl
 
 **Current Solution**: Template-driven workflow with Claude Code, Cline, and Gemini agent support
 
-**Evolution Path**: Enhanced templates → context management → intelligent agent orchestration (CABIO)
+**Evolution Path**: Enhanced templates → context management → intelligent agent orchestration (RAPID)
 
 ### Current Capabilities (Template System)
 
@@ -81,7 +81,7 @@ Structured `BRD → PRD → FRP` workflow with AI agent configurations. Currentl
 - **Quality Automation**: Integrated testing, linting, and validation workflows
 - **Professional Output**: Business documentation ready for stakeholders
 
-## Evolution: CABIO (Context-Aware Business Intelligence Orchestration)
+## Evolution: RAPID (Requirements-to-Agent Pipeline & Implementation Driver)
 
 ### Enhanced Templates (8-12 weeks)
 
@@ -91,7 +91,7 @@ Structured `BRD → PRD → FRP` workflow with AI agent configurations. Currentl
 - **Context Preservation**: Better information flow between analysis phases
 - **Streamlined Workflow**: Reduced manual editing and refinement time
 
-### CABIO Vision (12+ months)
+### RAPID Vision (12+ months)
 
 - **Real-time Intelligence**: Live market data and competitive monitoring
 - **Enterprise Scalability**: Advanced workflows for larger organizations
@@ -100,13 +100,13 @@ Structured `BRD → PRD → FRP` workflow with AI agent configurations. Currentl
 
 **Goal**: Transform template-based workflow into intelligent agent orchestration.
 
-Building on proven BRD→PRD→FRP foundation, CABIO represents our evolution path: enhanced templates (8-12 weeks) → agent orchestration → comprehensive business intelligence for small teams scaling to larger organizations.
+Building on proven BRD→PRD→FRP foundation, RAPID represents our evolution path: enhanced templates (8-12 weeks) → agent orchestration → comprehensive requirements pipeline for small teams scaling to larger organizations.
 
 ### Learn More
 
-- **[CABIO Vision](docs/CABIO-vision.md)** - Why business intelligence should be automated and contextual
-- **[CABIO Product Roadmap](docs/CABIO-product-roadmap.md)** - Customer value, target markets, and feature development  
-- **[CABIO Implementation Guide](docs/CABIO-implementation-guide.md)** - Technical architecture and implementation roadmap
+- **[RAPID Vision](docs/RAPID-vision.md)** - Vision for automated requirements orchestration
+- **[RAPID Product Roadmap](docs/RAPID-product-roadmap.md)** - Customer value, target markets, and feature development
+- **[RAPID Implementation Guide](docs/RAPID-implementation-guide.md)** - Technical architecture and implementation roadmap
 
 **Development**: Iterative approach starting with enhanced templates for small teams (8-12 weeks), then agent orchestration, expanding based on validation and user feedback. Current BRD→PRD→FRP workflow remains the foundation.
 
@@ -119,13 +119,13 @@ Building on proven BRD→PRD→FRP foundation, CABIO represents our evolution pa
 </details>
     <details>
     <summary>🔄 Enhanced Templates (8-12 weeks) - Agent Orchestration Visualization</summary>
-    <img src="assets/images/Business-Driven-Development-CABIO-SMB-Concise-light.png#gh-light-mode-only" alt="Enhanced Templates Agent Orchestration Diagram" title="Visualization: Agent orchestration with context compression and 50% less manual editing" width="80%" />
-    <img src="assets/images/Business-Driven-Development-CABIO-SMB-Concise-dark.png#gh-dark-mode-only" alt="Enhanced Templates Agent Orchestration Diagram" title="Visualization: Agent orchestration with context compression and 50% less manual editing" width="80%" />
+    <img src="assets/images/Business-Driven-Development-RAPID-SMB-Concise-light.png#gh-light-mode-only" alt="Enhanced Templates Agent Orchestration Diagram" title="Visualization: Agent orchestration with context compression and 50% less manual editing" width="80%" />
+    <img src="assets/images/Business-Driven-Development-RAPID-SMB-Concise-dark.png#gh-dark-mode-only" alt="Enhanced Templates Agent Orchestration Diagram" title="Visualization: Agent orchestration with context compression and 50% less manual editing" width="80%" />
 </details>
 <details>
-    <summary>🚀 Enterprise CABIO (12+ months) - Real-time Intelligence Visualization</summary>
-    <img src="assets/images/Business-Driven-Development-CABIO-Enterprise-Concise-light.png#gh-light-mode-only" alt="Enterprise CABIO Business Intelligence Diagram" title="Visualization: Real-time market data with enterprise scalability and multi-model optimization" width="80%" />
-    <img src="assets/images/Business-Driven-Development-CABIO-Enterprise-Concise-dark.png#gh-dark-mode-only" alt="Enterprise CABIO Business Intelligence Diagram" title="Visualization: Real-time market data with enterprise scalability and multi-model optimization" width="80%" />
+    <summary>🚀 Enterprise RAPID (12+ months) - Real-time Intelligence Visualization</summary>
+    <img src="assets/images/Business-Driven-Development-RAPID-Enterprise-Concise-light.png#gh-light-mode-only" alt="Enterprise RAPID Requirements Pipeline Diagram" title="Visualization: Real-time market data with enterprise scalability and multi-model optimization" width="80%" />
+    <img src="assets/images/Business-Driven-Development-RAPID-Enterprise-Concise-dark.png#gh-dark-mode-only" alt="Enterprise RAPID Requirements Pipeline Diagram" title="Visualization: Real-time market data with enterprise scalability and multi-model optimization" width="80%" />
 </details>
 
 ## Comprehensive Usage
@@ -146,7 +146,7 @@ Building on proven BRD→PRD→FRP foundation, CABIO represents our evolution pa
 
 ## Status
 
-**Current**: Template-based BRD→PRD→FRP workflow functional for small teams. Enhanced templates in development (8-12 weeks), CABIO orchestration planned (12+ months).
+**Current**: Template-based BRD→PRD→FRP workflow functional for small teams. Enhanced templates in development (8-12 weeks), RAPID orchestration planned (12+ months).
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
 

@@ -1,6 +1,6 @@
-# CABIO Vision
+# RAPID Vision
 
-Why Context-Aware Business Intelligence Orchestration matters
+Why Requirements-to-Agent Pipeline & Implementation Driver matters
 
 ## The Problem We've Experienced
 
@@ -27,7 +27,7 @@ We envision an evolution from current template system toward intelligent orchest
 - Context preservation between business analysis phases
 - Streamlined workflow requiring less manual refinement
 
-**Phase 2 (12+ months)**: Full CABIO business intelligence orchestration
+**Phase 2 (12+ months)**: Full RAPID business intelligence orchestration
 
 - Real market intelligence integration for data-driven decisions
 - Enterprise-grade workflows that scale with organizational growth
@@ -63,7 +63,7 @@ This comes from our own experience building products:
 - **Belief** that enhanced templates with agent orchestration can reduce analysis overhead
 - **Vision** that small teams deserve professional business intelligence frameworks
 
-CABIO evolves business intelligence from manual template refinement toward intelligent agent orchestration for teams of any size.
+RAPID evolves business intelligence from manual template refinement toward intelligent agent orchestration for teams of any size.
 
 ---
 

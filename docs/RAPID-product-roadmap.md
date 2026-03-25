@@ -1,4 +1,4 @@
-# CABIO Product Roadmap
+# RAPID-spec-forge Product Roadmap
 
 What we're building and the value it delivers
 
@@ -6,7 +6,7 @@ What we're building and the value it delivers
 
 **Enhanced business analysis templates for small teams (5-25 people), evolving toward intelligent orchestration.**
 
-CABIO transforms the current template-based BRD→PRD→FRP workflow through agent orchestration and context compression - starting with enhanced templates (8-12 weeks), building toward comprehensive business intelligence automation (12+ months).
+RAPID transforms the current template-based BRD→PRD→FRP workflow through agent orchestration and context compression - starting with enhanced templates (8-12 weeks), building toward comprehensive business intelligence automation (12+ months).
 
 ## Customer Pain Points & Gains
 
@@ -18,7 +18,7 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 - **Documentation Gap**: Informal business thinking not suitable for investors or team alignment
 - **Resource Constraints**: Small teams lack dedicated business analysts or market researchers
 
-### Customer Gains with CABIO
+### Customer Gains with RAPID
 
 - **Enhanced Structure**: Professional business analysis workflow with improved templates and agent orchestration
 - **Reduced Manual Work**: Agent orchestration and context compression minimize template refinement time
@@ -128,7 +128,7 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 ### Process Risks
 
 - **Learning Curve**: Comprehensive documentation and migration guide
-- **Backward Compatibility**: Maintain legacy workflow alongside CABIO
+- **Backward Compatibility**: Maintain legacy workflow alongside RAPID
 - **Data Privacy**: Secure credential management and data handling policies
 
 ### Production Risks (Phase 7)
@@ -146,12 +146,12 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 
 **Total Enhanced Templates**: 8-12 weeks
 
-### Full CABIO Timeline (Future Phases)
+### Full RAPID Timeline (Future Phases)
 
 - **Phase 2**: 12+ months (Real-time business intelligence + Advanced features)
 - **Phase 3**: Future (Enterprise architecture & compliance)
 
-**Total Full CABIO**: 12-18+ months
+**Total Full RAPID**: 12-18+ months
 
 ## Market Applications & Commercialization Opportunities
 
@@ -160,29 +160,29 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 1. Multi-Agent Infrastructure Platform
 
    - **Problem**: Multi-agent systems are complex to build and orchestrate effectively
-   - **CABIO Solution**: Context-aware orchestration platform for enterprise agent workflows
+   - **RAPID Solution**: Context-aware orchestration platform for enterprise agent workflows
    - **Market**: B2B SaaS for companies building AI agent systems, enterprise software teams
    - **Revenue Model**: Platform licensing + usage-based pricing
 
 2. AI-Native Business Intelligence Suite
 
    - **Problem**: Traditional BI tools lack AI-native architecture and contextual intelligence
-   - **CABIO Solution**: Complete BRD→PRD→FRP workflow with real-time business intelligence
+   - **RAPID Solution**: Complete BRD→PRD→FRP workflow with real-time business intelligence
    - **Market**: Enterprise product teams, consulting firms, startups, SMBs
    - **Revenue Model**: Subscription tiers based on analysis complexity and team size
 
 3. Small Team Productivity Amplifier
 
    - **Problem**: 10-person companies need enterprise-level business analysis but lack dedicated roles
-   - **CABIO Solution**: "CABIO Lite" - simplified single-agent mode that scales to multi-agent orchestration
+   - **RAPID Solution**: "RAPID Lite" - simplified single-agent mode that scales to multi-agent orchestration
    - **Market**: Small companies, consulting firms, agencies, bootstrapped startups
    - **Revenue Model**: Affordable tiers designed for small teams ($99-499/month)
-   - **TODO**: Decide whether to start with CABIO Lite or implement scaling later
+   - **TODO**: Decide whether to start with RAPID Lite or implement scaling later
 
 4. Professional Development & Training Platform
 
 - **Problem**: Rapid skill development needed for business analysis and product management
-- **CABIO Solution**: AI-powered training using real business scenarios and structured frameworks
+- **RAPID Solution**: AI-powered training using real business scenarios and structured frameworks
 - **Market**: Corporate training, professional development, individual skill building
 - **Revenue Model**: Course subscriptions + enterprise training contracts
 
@@ -190,7 +190,7 @@ CABIO transforms the current template-based BRD→PRD→FRP workflow through age
 
 ### Phase 8: Market Validation & Product Development
 
-- [ ] **Multi-Agent Infrastructure MVP**: Package CABIO as agent orchestration platform
+- [ ] **Multi-Agent Infrastructure MVP**: Package RAPID as agent orchestration platform
 - [ ] **Small Team Solution**: Create simplified version for 10-person companies
   - [ ] One-click business analysis workflows
   - [ ] Automated market research and competitive intelligence

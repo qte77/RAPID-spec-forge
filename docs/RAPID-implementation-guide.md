@@ -1,6 +1,6 @@
-# CABIO Implementation Guide
+# RAPID Implementation Guide
 
-Technical specifications and implementation requirements for Context-Aware Business Intelligence Orchestration
+Technical specifications and implementation requirements for RAPID-spec-forge
 
 ## Phase Completion Criteria
 
@@ -141,4 +141,4 @@ Technical specifications and implementation requirements for Context-Aware Busin
 
 ---
 
-*This document defines implementation requirements and operational specifications for the CABIO system.*
+*This document defines implementation requirements and operational specifications for the RAPID system.*

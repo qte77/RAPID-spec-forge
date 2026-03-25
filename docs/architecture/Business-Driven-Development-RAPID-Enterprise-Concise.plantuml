@@ -1,18 +1,18 @@
-@startuml Business-Driven-Development-CABIO-Enterprise-Concise
-title CABIO Enterprise Business Intelligence (12+ months) - Concise
+@startuml Business-Driven-Development-RAPID-Enterprise-Concise
+title RAPID Enterprise Business Intelligence (12+ months) - Concise
 
 !log Current 'STYLE' dvar: STYLE
 !log About to include: styles/github-STYLE.puml
 !include styles/github-STYLE.puml
 
 participant "User" as User
-participant "CABIO Orchestrator" as Orchestrator
+participant "RAPID Orchestrator" as Orchestrator
 participant "Real-time Data" as RealTimeData
 participant "Business Agents" as Agents
 participant "Memory System" as Memory
 participant "Human Oversight" as Oversight
 
-== Full CABIO Business Intelligence Orchestration ==
+== Full RAPID Business Intelligence Orchestration ==
 
 User -> Orchestrator: Business objectives
 

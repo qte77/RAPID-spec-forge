@@ -46,14 +46,14 @@
 ├── README.md
 ├── assets
     └── images
-    │   ├── Business-Driven-Development-CABIO-Enterprise-Concise-dark.png
-    │   ├── Business-Driven-Development-CABIO-Enterprise-Concise-light.png
-    │   ├── Business-Driven-Development-CABIO-Enterprise-Phase-dark.png
-    │   ├── Business-Driven-Development-CABIO-Enterprise-Phase-light.png
-    │   ├── Business-Driven-Development-CABIO-SMB-Concise-dark.png
-    │   ├── Business-Driven-Development-CABIO-SMB-Concise-light.png
-    │   ├── Business-Driven-Development-CABIO-SMB-Phase-dark.png
-    │   ├── Business-Driven-Development-CABIO-SMB-Phase-light.png
+    │   ├── Business-Driven-Development-RAPID-Enterprise-Concise-dark.png
+    │   ├── Business-Driven-Development-RAPID-Enterprise-Concise-light.png
+    │   ├── Business-Driven-Development-RAPID-Enterprise-Phase-dark.png
+    │   ├── Business-Driven-Development-RAPID-Enterprise-Phase-light.png
+    │   ├── Business-Driven-Development-RAPID-SMB-Concise-dark.png
+    │   ├── Business-Driven-Development-RAPID-SMB-Concise-light.png
+    │   ├── Business-Driven-Development-RAPID-SMB-Phase-dark.png
+    │   ├── Business-Driven-Development-RAPID-SMB-Phase-light.png
     │   ├── Business-Driven-Development-Current-Concise-dark.png
     │   ├── Business-Driven-Development-Current-Concise-light.png
     │   ├── Business-Driven-Development-Current-Dark-dark.png
@@ -77,14 +77,14 @@
     │   ├── frp_base.md
     │   └── prd_base.md
 ├── docs
-    ├── CABIO-implementation-guide.md
-    ├── CABIO-product-roadmap.md
-    ├── CABIO-vision.md
+    ├── RAPID-implementation-guide.md
+    ├── RAPID-product-roadmap.md
+    ├── RAPID-vision.md
     ├── architecture
-    │   ├── Business-Driven-Development-CABIO-Enterprise-Concise.plantuml
-    │   ├── Business-Driven-Development-CABIO-Enterprise-Phase.plantuml
-    │   ├── Business-Driven-Development-CABIO-SMB-Concise.plantuml
-    │   ├── Business-Driven-Development-CABIO-SMB-Phase.plantuml
+    │   ├── Business-Driven-Development-RAPID-Enterprise-Concise.plantuml
+    │   ├── Business-Driven-Development-RAPID-Enterprise-Phase.plantuml
+    │   ├── Business-Driven-Development-RAPID-SMB-Concise.plantuml
+    │   ├── Business-Driven-Development-RAPID-SMB-Phase.plantuml
     │   ├── Business-Driven-Development-Current-Concise.plantuml
     │   ├── Business-Driven-Development-Current.plantuml
     │   ├── README.md
@@ -1755,7 +1755,7 @@
 42 | - context/business_inputs/ directory for initial business information
 43 | - context/BRDs/ directory for business requirements definitions
 44 | - context/PRDs/ directory for product requirements documents
-45 | - CABIO vision documents: vision, product roadmap, and implementation guide
+45 | - RAPID vision documents: vision, product roadmap, and implementation guide
 46 | - Prominent product state and vision summary in README.md
 47 | - Complete PlantUML architecture diagram suite with GitHub theme support
 48 | - Workflow visualizations showing current → enhanced → enterprise evolution
@@ -1769,7 +1769,7 @@
 56 | - Enhanced execute-frp command to reference PRD and BRD context for full traceability
 57 | - Legacy Makefile recipes renamed for clarity (frp_gen_legacy_claude, frp_exe_legacy_claude)
 58 | - Comprehensive documentation consistency fixes across all files
-59 | - Aligned product positioning: template system (current) → enhanced templates (8-12 weeks) → CABIO (12+ months)
+59 | - Aligned product positioning: template system (current) → enhanced templates (8-12 weeks) → RAPID (12+ months)
 60 | - Clarified target market focus on small teams (5-25 people) with enterprise scaling path
 61 | - Resolved timeline contradictions and technical architecture inconsistencies
 62 | 
@@ -1828,51 +1828,51 @@
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-Enterprise-Concise-dark.png:
+/assets/images/Business-Driven-Development-RAPID-Enterprise-Concise-dark.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-Enterprise-Concise-dark.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-Enterprise-Concise-dark.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-Enterprise-Concise-light.png:
+/assets/images/Business-Driven-Development-RAPID-Enterprise-Concise-light.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-Enterprise-Concise-light.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-Enterprise-Concise-light.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-Enterprise-Phase-dark.png:
+/assets/images/Business-Driven-Development-RAPID-Enterprise-Phase-dark.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-Enterprise-Phase-dark.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-Enterprise-Phase-dark.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-Enterprise-Phase-light.png:
+/assets/images/Business-Driven-Development-RAPID-Enterprise-Phase-light.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-Enterprise-Phase-light.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-Enterprise-Phase-light.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-SMB-Concise-dark.png:
+/assets/images/Business-Driven-Development-RAPID-SMB-Concise-dark.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-SMB-Concise-dark.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-SMB-Concise-dark.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-SMB-Concise-light.png:
+/assets/images/Business-Driven-Development-RAPID-SMB-Concise-light.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-SMB-Concise-light.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-SMB-Concise-light.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-SMB-Phase-dark.png:
+/assets/images/Business-Driven-Development-RAPID-SMB-Phase-dark.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-SMB-Phase-dark.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-SMB-Phase-dark.png
 
 
 --------------------------------------------------------------------------------
-/assets/images/Business-Driven-Development-CABIO-SMB-Phase-light.png:
+/assets/images/Business-Driven-Development-RAPID-SMB-Phase-light.png:
 --------------------------------------------------------------------------------
-https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-CABIO-SMB-Phase-light.png
+https://raw.githubusercontent.com/qte77/context-engineering-template/3a4083177213652723eb99487804e4ff6eaa97a0/assets/images/Business-Driven-Development-RAPID-SMB-Phase-light.png
 
 
 --------------------------------------------------------------------------------
@@ -2377,9 +2377,9 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 
 
 --------------------------------------------------------------------------------
-/docs/CABIO-vision.md:
+/docs/RAPID-vision.md:
 --------------------------------------------------------------------------------
- 1 | # CABIO Vision
+ 1 | # RAPID Vision
  2 | 
  3 | Why Context-Aware Business Intelligence Orchestration matters
  4 | 
@@ -2408,7 +2408,7 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 27 | - Context preservation between business analysis phases
 28 | - Streamlined workflow requiring less manual refinement
 29 | 
-30 | **Phase 2 (12+ months)**: Full CABIO business intelligence orchestration
+30 | **Phase 2 (12+ months)**: Full RAPID business intelligence orchestration
 31 | 
 32 | - Real market intelligence integration for data-driven decisions
 33 | - Enterprise-grade workflows that scale with organizational growth
@@ -2444,7 +2444,7 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 63 | - **Belief** that enhanced templates with agent orchestration can reduce analysis overhead
 64 | - **Vision** that small teams deserve professional business intelligence frameworks
 65 | 
-66 | CABIO evolves business intelligence from manual template refinement toward intelligent agent orchestration for teams of any size.
+66 | RAPID evolves business intelligence from manual template refinement toward intelligent agent orchestration for teams of any size.
 67 | 
 68 | ---
 69 | 
@@ -2453,23 +2453,23 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 
 
 --------------------------------------------------------------------------------
-/docs/architecture/Business-Driven-Development-CABIO-Enterprise-Concise.plantuml:
+/docs/architecture/Business-Driven-Development-RAPID-Enterprise-Concise.plantuml:
 --------------------------------------------------------------------------------
- 1 | @startuml Business-Driven-Development-CABIO-Enterprise-Concise
- 2 | title CABIO Enterprise Business Intelligence (12+ months) - Concise
+ 1 | @startuml Business-Driven-Development-RAPID-Enterprise-Concise
+ 2 | title RAPID Enterprise Business Intelligence (12+ months) - Concise
  3 | 
  4 | !log Current 'STYLE' dvar: STYLE
  5 | !log About to include: styles/github-STYLE.puml
  6 | !include styles/github-STYLE.puml
  7 | 
  8 | participant "User" as User
- 9 | participant "CABIO Orchestrator" as Orchestrator
+ 9 | participant "RAPID Orchestrator" as Orchestrator
 10 | participant "Real-time Data" as RealTimeData
 11 | participant "Business Agents" as Agents
 12 | participant "Memory System" as Memory
 13 | participant "Human Oversight" as Oversight
 14 | 
-15 | == Full CABIO Business Intelligence Orchestration ==
+15 | == Full RAPID Business Intelligence Orchestration ==
 16 | 
 17 | User -> Orchestrator: Business objectives
 18 | 
@@ -2507,17 +2507,17 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 
 
 --------------------------------------------------------------------------------
-/docs/architecture/Business-Driven-Development-CABIO-Enterprise-Phase.plantuml:
+/docs/architecture/Business-Driven-Development-RAPID-Enterprise-Phase.plantuml:
 --------------------------------------------------------------------------------
- 1 | @startuml Business-Driven-Development-CABIO-Enterprise-Phase
- 2 | title CABIO Enterprise Business Intelligence Orchestration (12+ months)
+ 1 | @startuml Business-Driven-Development-RAPID-Enterprise-Phase
+ 2 | title RAPID Enterprise Business Intelligence Orchestration (12+ months)
  3 | 
  4 | !log Current 'STYLE' dvar: STYLE
  5 | !log About to include: styles/github-STYLE.puml
  6 | !include styles/github-STYLE.puml
  7 | 
  8 | participant "User" as User
- 9 | participant "CABIO Orchestrator" as Orchestrator
+ 9 | participant "RAPID Orchestrator" as Orchestrator
 10 | participant "Real-time Market Data" as MarketData
 11 | participant "Competitive Intelligence" as CompIntel
 12 | participant "Business Analysis Agent" as BizAgent
@@ -2527,7 +2527,7 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 16 | participant "Human Oversight" as Oversight
 17 | participant "Multi-Model Router" as ModelRouter
 18 | 
-19 | == Full CABIO Business Intelligence Orchestration ==
+19 | == Full RAPID Business Intelligence Orchestration ==
 20 | 
 21 | group Real-time Market Intelligence Integration [#161B22]
 22 | 
@@ -2604,9 +2604,9 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 
 
 --------------------------------------------------------------------------------
-/docs/architecture/Business-Driven-Development-CABIO-SMB-Concise.plantuml:
+/docs/architecture/Business-Driven-Development-RAPID-SMB-Concise.plantuml:
 --------------------------------------------------------------------------------
- 1 | @startuml Business-Driven-Development-CABIO-SMB-Concise
+ 1 | @startuml Business-Driven-Development-RAPID-SMB-Concise
  2 | title Enhanced Templates with Agent Orchestration (8-12 weeks) - Concise
  3 | 
  4 | !log Current 'STYLE' dvar: STYLE
@@ -2658,9 +2658,9 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
 
 
 --------------------------------------------------------------------------------
-/docs/architecture/Business-Driven-Development-CABIO-SMB-Phase.plantuml:
+/docs/architecture/Business-Driven-Development-RAPID-SMB-Phase.plantuml:
 --------------------------------------------------------------------------------
- 1 | @startuml Business-Driven-Development-CABIO-SMB-Phase
+ 1 | @startuml Business-Driven-Development-RAPID-SMB-Phase
  2 | title Enhanced Templates with Agent Orchestration (8-12 weeks)
  3 | 
  4 | !log Current 'STYLE' dvar: STYLE
@@ -2871,11 +2871,11 @@ https://raw.githubusercontent.com/qte77/context-engineering-template/3a408317721
  4 | 
  5 | ## Purpose
  6 | 
- 7 | The diagrams illustrate the evolution of the business-driven development workflow from current template-based system to full CABIO (Context-Aware Business Intelligence Orchestration) implementation:
+ 7 | The diagrams illustrate the evolution of the business-driven development workflow from current template-based system to full RAPID (Context-Aware Business Intelligence Orchestration) implementation:
  8 | 
  9 | - **Current State**: Template-based BRD→PRD→FRP workflow with AI agent support
 10 | - **Enhanced Templates (8-12 weeks)**: Agent orchestration with context compression and market integration  
-11 | - **Enterprise CABIO (12+ months)**: Real-time business intelligence with enterprise scalability
+11 | - **Enterprise RAPID (12+ months)**: Real-time business intelligence with enterprise scalability
 12 | 
 13 | All diagrams prominently feature the **Implementation (Key USP)** section, demonstrating how the system transforms business analysis into working code - the critical differentiator from traditional business intelligence tools.
 14 | 

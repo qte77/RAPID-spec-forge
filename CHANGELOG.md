@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Renamed project from CABIO (Context-Aware Business Intelligence Orchestration) to RAPID-spec-forge (Requirements-to-Agent Pipeline & Implementation Driver: Spec Forge)
+- Renamed all doc files, image files, and PlantUML files from CABIO to RAPID
+- Updated all internal text references
+
 ## [1.0.0] - 2025-08-10
 
 ### Added
