@@ -4,11 +4,11 @@ This directory contains the source files for the Context Engineering Template's 
 
 ## Purpose
 
-The diagrams illustrate the evolution of the business-driven development workflow from current template-based system to full CABIO (Context-Aware Business Intelligence Orchestration) implementation:
+The diagrams illustrate the evolution of the business-driven development workflow from current template-based system to full RAPID (Requirements-to-Agent Pipeline & Implementation Driver) implementation:
 
 - **Current State**: Template-based BRD→PRD→FRP workflow with AI agent support
 - **Enhanced Templates (8-12 weeks)**: Agent orchestration with context compression and market integration  
-- **Enterprise CABIO (12+ months)**: Real-time business intelligence with enterprise scalability
+- **Enterprise RAPID (12+ months)**: Real-time business intelligence with enterprise scalability
 
 All diagrams prominently feature the **Implementation (Key USP)** section, demonstrating how the system transforms business analysis into working code - the critical differentiator from traditional business intelligence tools.
 

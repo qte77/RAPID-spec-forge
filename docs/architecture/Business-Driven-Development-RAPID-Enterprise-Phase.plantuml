@@ -1,12 +1,12 @@
-@startuml Business-Driven-Development-CABIO-Enterprise-Phase
-title CABIO Enterprise Business Intelligence Orchestration (12+ months)
+@startuml Business-Driven-Development-RAPID-Enterprise-Phase
+title RAPID Enterprise Business Intelligence Orchestration (12+ months)
 
 !log Current 'STYLE' dvar: STYLE
 !log About to include: styles/github-STYLE.puml
 !include styles/github-STYLE.puml
 
 participant "User" as User
-participant "CABIO Orchestrator" as Orchestrator
+participant "RAPID Orchestrator" as Orchestrator
 participant "Real-time Market Data" as MarketData
 participant "Competitive Intelligence" as CompIntel
 participant "Business Analysis Agent" as BizAgent
@@ -16,7 +16,7 @@ participant "Memory System" as Memory
 participant "Human Oversight" as Oversight
 participant "Multi-Model Router" as ModelRouter
 
-== Full CABIO Business Intelligence Orchestration ==
+== Full RAPID Business Intelligence Orchestration ==
 
 group Real-time Market Intelligence Integration [#161B22]
 
