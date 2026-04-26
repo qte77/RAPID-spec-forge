@@ -1,5 +1,18 @@
 # Context Engineering Template
 
+> ## ⚠️ This repository is archived. [`qte77/qte77`](https://github.com/qte77/qte77) is taking over.
+>
+> Active follow-up tracking has moved. See:
+>
+> | What | Where it landed |
+> | --- | --- |
+> | Spec methodology (BRD → PRD → FRP) | To be extracted as `spec-forge` plugin in [`qte77/claude-code-plugins`](https://github.com/qte77/claude-code-plugins) |
+> | `goal_id` frontmatter for templates (was [#5](https://github.com/qte77/RAPID-spec-forge/issues/5)) | [`qte77/qte77#50`](https://github.com/qte77/qte77/issues/50) |
+> | Spec-lifecycle cockpit (was [#9](https://github.com/qte77/RAPID-spec-forge/issues/9) / [PR #1](https://github.com/qte77/RAPID-spec-forge/pull/1)) | [`qte77/qte77#51`](https://github.com/qte77/qte77/issues/51) |
+> | Doc-search skill + memory store (was [PR #10](https://github.com/qte77/RAPID-spec-forge/pull/10)) | [`qte77/qte77#52`](https://github.com/qte77/qte77/issues/52) — code preserved in branch [`chore/license-apache-2.0`](https://github.com/qte77/RAPID-spec-forge/tree/chore/license-apache-2.0) |
+>
+> The content below is preserved as historical context.
+
 Business workflow system with AI agent support. Evolving toward intelligent orchestration: from business analysis to requirements to implementation.
 
 [![License](https://img.shields.io/badge/license-GNUGPLv3-green.svg)](LICENSE)
@@ -156,3 +169,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 - **[Examples](docs/examples.md)** - Complete examples and demonstrations
 - **[AGENTS.md](AGENTS.md)** - Agent configuration and behavior
 - **[examples/mcp-server-client/](examples/mcp-server-client/)** - Working MCP implementation, implemented with legacy custom commands workflow
+
+## Lineage
+
+This repository continues [`context-engineering-template-legacy`](https://github.com/qte77/context-engineering-template-legacy) (created 2025-07-06; CABIO vision introduced 2025-08-11), where the BRD → PRD → FRP pipeline originated. The legacy repo is reference-only.
