@@ -156,3 +156,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 - **[Examples](docs/examples.md)** - Complete examples and demonstrations
 - **[AGENTS.md](AGENTS.md)** - Agent configuration and behavior
 - **[examples/mcp-server-client/](examples/mcp-server-client/)** - Working MCP implementation, implemented with legacy custom commands workflow
+
+## Lineage
+
+This repository continues [`context-engineering-template-legacy`](https://github.com/qte77/context-engineering-template-legacy) (created 2025-07-06; CABIO vision introduced 2025-08-11), where the BRD → PRD → FRP pipeline originated. The legacy repo is reference-only.
