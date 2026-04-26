@@ -1,8 +1,8 @@
 # Context Engineering Template
 
-> ## ⚠️ This repository is archived. [`qte77/qte77`](https://github.com/qte77/qte77) is taking over.
+> ## ⚠️ Archived 2026-04-26 — superseded by https://github.com/qte77/qte77
 >
-> Active follow-up tracking has moved. See:
+> [`qte77/qte77`](https://github.com/qte77/qte77) is taking over. Active follow-up tracking has moved. See:
 >
 > | What | Where it landed |
 > | --- | --- |
